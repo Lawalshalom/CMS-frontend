@@ -245,11 +245,16 @@ body::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Merienda";
   padding-left: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#home .logo-text h3 span {
+  overflow: hidden;
 }
 
 #home a {
@@ -287,7 +292,7 @@ body::-webkit-scrollbar {
   margin-top: 20vh;
 }
 
-.form-input h4, .form-input #footer .right, #footer .form-input .right {
+.form-input h4 {
   font-weight: bolder;
 }
 
@@ -417,7 +422,28 @@ body::-webkit-scrollbar {
   background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png") center center/contain no-repeat;
 }
 
-#footer h4, #footer .right {
+#footer h4 {
+  font-family: "Merienda";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer h4 span {
+  overflow: hidden;
+}
+
+#footer .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

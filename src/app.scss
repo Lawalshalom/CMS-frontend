@@ -187,8 +187,12 @@ body {
 		h3 {
 			font-weight: 700;
 			display: flex;
+			font-family: "Merienda";
 			padding-left: 5px;
 			flex-direction: column;
+			span {
+				overflow: hidden;
+			}
 		}
 	}
 	a {
@@ -308,13 +312,20 @@ body {
 			center center / contain no-repeat;
 	}
 	h4 {
+		font-family: "Merienda";
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		span {
+			overflow: hidden;
+		}
 	}
 	.right {
-		@extend h4;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	.footer-links {
 		margin-top: 10px;
