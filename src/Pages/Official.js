@@ -14,7 +14,7 @@ const Official = () => {
     })
     return (
         <>
-        <div className="container-xl container-fluid">
+        <div data-aos="fade-up" className="container-xl container-fluid">
         <Header/>
             <div className="login">
                 <h3>Welcome</h3>

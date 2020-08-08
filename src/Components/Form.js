@@ -11,28 +11,28 @@ const Form = () => {
     }
     return (
     <div className="form-input">
-    <h4>Please, kindly ensure the details provided are accurate and correct</h4>
+    <h4 data-aos="fade-right">Please, kindly ensure the details provided are accurate and correct</h4>
     <form className="row">
         <div className="name-input col-12 col-sm-6 col-xm-6">
-            <section>
+            <section data-aos="fade-right">
             <label>Family Name</label>
             <input type="name" name="name" required placeholder="Enter Family Name"/>
             </section>
         </div>
         <div className="family col-12 col-sm-6 col-xm-6">
-            <section>
+            <section data-aos="fade-left">
             <label>Number in Family</label>
             <input type="number" required min="1" placeholder="1"/>
             </section>
         </div>
         <div className="language col-12 col-sm-6 col-xm-6">
-          <section>
+          <section data-aos="fade-right">
             <label>Native Language</label>
             <input type="text" required minLength="3" placeholder="Enter Native Language"/>
             </section>
         </div>
         <div className="residence col-12 col-sm-6 col-xm-6">
-            <section>
+            <section data-aos="fade-left">
             <label>State of residence</label>
             <select name="state" id="state-select" required>
                 <option value="">--Please choose your state--</option>
@@ -44,7 +44,7 @@ const Form = () => {
             </section>
         </div>
         <div className="submit-btn">
-            <button type="submit" onSubmit={handleSubmit}>Submit</button>
+            <button data-aos="fade-up" type="submit" onSubmit={handleSubmit}>Submit</button>
         </div>
     </form>
 </div>
