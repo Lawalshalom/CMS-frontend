@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="col-12 col-sm-6 col-xm-6 right">
                         <div className="logo-text">
                             <div className="logo-img" data-aos="fade-right"></div>
-                            <h3 data-aos="fade-down"><span>CENSUS</span><span>MANAGEMENT</span><span>SERVICE</span></h3>
+                            <h3 data-aos="fade-down"><span>CENSUS</span><span>MANAGEMENT</span><span>SYSTEM</span></h3>
                         </div>
                         <h5 data-aos="fade-left"><em>Get Counted</em></h5>
                         <p className="text-center" data-aos="fade-right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo temporibus nesciunt, recusandae exercitationem molestiae accusamus hic quia consequuntur similique ratione suscipit praesentium! Ex eligendi repellendus ratione sed architecto. Qui animi reiciendis voluptatem nemo vel unde. Quo voluptatum omnis!</p>

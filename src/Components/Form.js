@@ -1,14 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Form = () => {
 
     const originStates = ["Abia","Adamawa","Akwa Ibom","Anambra","Bauchi","Bayelsa","Benue","Borno","Cross River",
     "Delta","Ebonyi","Edo","Ekiti","Enugu","Gombe","Imo","Jigawa","Kaduna","Kano","Katsina","Kebbi","Kogi","Kwara","Lagos",
     "Nasarawa","Niger","Ogun","Ondo","Osun","Oyo","Plateau","Rivers","Sokoto","Taraba","Yobe","Zamfara","FCT"]
-    function handleSubmit(e) {
-        e.preventDefault();
-        console.log(e)
-    }
+
+
+    useEffect(() => {
+        const form = document.querySelector("form");
+        const loading = document.querySelector(".loading");
+        const submitBtn = document.querySelector(".submit-btn");
+        const success = document.querySelector(".success");
+        const failed = document.querySelector(".failed");
+        form.onsubmit = handleSubmit;
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            submitBtn.style.display = "none"
+            loading.style.display = "flex";
+
+            let formData = new FormData(form)
+
+            let Params = {
+                mode: 'no-cors',
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: formData.get("name"),
+                    number: formData.get("familyNo"),
+                    language: formData.get("language"),
+                    state: formData.get("state")
+                }),
+                method: "POST"
+            };
+            const sendData = async function(){
+             const res = await fetch("https://cms-team20.herokuapp.com/api/data-upload", Params);
+
+                loading.style.display = "none";
+                success.style.display = "flex";
+                console.log(res)}
+
+            sendData().catch(err => {
+                loading.style.display = "none";
+                success.style.display = "none";
+                submitBtn.style.display = "flex";
+                failed.style.display = "flex";
+                console.log(err);
+            });
+        }
+    })
     return (
     <div className="form-input">
     <h4 data-aos="fade-right">Please, kindly ensure the details provided are accurate and correct</h4>
@@ -22,13 +64,13 @@ const Form = () => {
         <div className="family col-12 col-sm-6 col-xm-6">
             <section data-aos="fade-left">
             <label>Number in Family</label>
-            <input type="number" required min="1" placeholder="1"/>
+            <input type="number" name="familyNo" required min="1" placeholder="1"/>
             </section>
         </div>
         <div className="language col-12 col-sm-6 col-xm-6">
           <section data-aos="fade-right">
             <label>Native Language</label>
-            <input type="text" required minLength="3" placeholder="Enter Native Language"/>
+            <input type="text" name="language" required minLength="3" placeholder="Enter Native Language"/>
             </section>
         </div>
         <div className="residence col-12 col-sm-6 col-xm-6">
@@ -44,9 +86,16 @@ const Form = () => {
             </section>
         </div>
         <div className="submit-btn">
-            <button data-aos="fade-up" type="submit" onSubmit={handleSubmit}>Submit</button>
+            <button data-aos="fade-up" type="submit">Submit</button>
         </div>
     </form>
+    <div className="loading"><h4>Loading...</h4></div>
+    <div className="failed">
+        <h4>Error while uploading data, Please try again</h4>
+    </div>
+    <div className="success">
+        <h4>Your data has been successfully uploaded</h4>
+    </div>
 </div>
     )
 }

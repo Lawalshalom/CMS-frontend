@@ -296,7 +296,10 @@ body::-webkit-scrollbar {
   font-weight: bolder;
 }
 
-.form-input div {
+.form-input .name-input,
+.form-input .family,
+.form-input .language,
+.form-input .residence {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,6 +377,50 @@ body::-webkit-scrollbar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.success,
+.loading,
+.failed {
+  display: none;
+  padding: 20px 0 0;
+}
+
+.loading::after {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #302f66;
+  border-bottom: none;
+  border-left: none;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 576px) {

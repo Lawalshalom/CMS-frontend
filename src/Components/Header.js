@@ -24,9 +24,7 @@ const Header = () => {
         setShowMenu(false);
   }
 }
-
-
-   const navType= (width) => {
+   const navType = (width) => {
    if(width > 545) {
         return (
         <header id="header">
@@ -66,6 +64,7 @@ const Header = () => {
     </>
 )
 }
+
 
    return navType(width);
 }

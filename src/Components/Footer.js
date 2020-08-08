@@ -7,7 +7,7 @@ const Footer = ()=> {
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-12 logo">
                         <div className="footer-icon"></div>
-                        <h4><span>CENSUS</span><span>MANAGEMENT</span><span>SERVICE</span></h4>
+                        <h4><span>CENSUS</span><span>MANAGEMENT</span><span>SYSTEM</span></h4>
                     </div>
                     <div className="col-lg-8 col-md-12 col-sm-12 right">
                         <div className="footer-links">
