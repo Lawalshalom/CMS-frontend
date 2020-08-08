@@ -1,50 +1,34 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment } from 'react';
-import "../App.css";
-import Header from "../Components/Homepage/Header";
-import About from "../Components/Homepage/About";
-import Partners from "../Components/Homepage/Partners";
-import Counts from "../Components/Homepage/Counts";
-import Services from "../Components/Homepage/Services";
-import Blog from "../Components/Homepage/Blog";
-import Stories from "../Components/Homepage/Stories";
-import Gallery from "../Components/Homepage/Gallery";
-import Team from "../Components/Homepage/Team";
-import Contact from "../Components/Homepage/Contact";
-import Footer from "../Components/Homepage/Footer";
+import React from 'react';
+import Header from "../Components/Header";
+import Form from "../Components/Form";
+import Footer from "../Components/Footer";
 
- class Home extends React.Component {
-  render() {
+const Home = () => {
+
     return (
-  <Fragment>
-      <Header toggleClass={this.props.toggleClass}/>
-      <section id="hero" className="d-flex align-items-center">
-        <div className="container container-md" data-aos="zoom-out-down" data-aos-delay="100">
-          <div className="animated order-2 order-lg-1 d-flex flex-column justify-content-center hero-img"
-            style={{backgroundImage: 'url("https://res.cloudinary.com/lawfirm1000/image/upload/v1595514266/SCM%20UI%20Project/chris-edited-new_ssmt6s.png")'}}>
-            <h1 data-aos="fade-up"><span>SCM UI</span><br/>the abode of His presence!</h1>
-            <div data-aos="fade-up" offset="0" data-aos-delay="800">
-              <a href="#contact" className="btn-get-started scrollto">Join Us!</a>
-            </div>
-          </div>
+    <>
+        <div className="container-xl container-fluid">
+            <Header />
+            <main id="home">
+                <div className="intro row">
+                    <div className="col-12 col-sm-6 col-xm-6 right">
+                        <div className="logo-text">
+                            <div className="logo-img"></div>
+                            <h3><span>CENSUS</span><span>MANAGEMENT</span><span>SERVICE</span></h3>
+                        </div>
+                        <h5><em>Get Counted</em></h5>
+                        <p className="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo temporibus nesciunt, recusandae exercitationem molestiae accusamus hic quia consequuntur similique ratione suscipit praesentium! Ex eligendi repellendus ratione sed architecto. Qui animi reiciendis voluptatem nemo vel unde. Quo voluptatum omnis!</p>
+                        <a href="#footer">Get Started</a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-xm-6">
+                        <div className="data-circle"></div>
+                    </div>
+                </div>
+             <Form />
+            </main>
+            <Footer />
         </div>
-      </section>
-
-    <main id="main">
-      <About />
-      <Partners />
-      <Counts />
-      <Services />
-      <Blog />
-      <Stories />
-      <Gallery />
-      <Team />
-      <Contact />
-    </main>
-    <Footer />
-  </Fragment>
+    </>
     )
-  }
 }
-
 export default Home;

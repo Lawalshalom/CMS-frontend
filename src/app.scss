@@ -1,0 +1,426 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+body {
+	color: rgb(4, 3, 71);
+	background-color: rgb(228, 228, 247);
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+#header {
+	margin-top: 0;
+	width: 100%;
+
+	.row {
+		width: 100%;
+	}
+
+	.icon {
+		height: 50px;
+		width: 100px;
+		background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png")
+			center no-repeat;
+	}
+	.navbar {
+		display: flex;
+		justify-content: center;
+		align-self: center;
+		margin-top: 25px;
+		list-style: none;
+
+		li {
+			padding: 0 20px;
+			font-weight: 600;
+			&.active {
+				border-bottom: 2px solid;
+			}
+		}
+
+		a {
+			color: rgb(4, 3, 71);
+			&:hover {
+				text-decoration: none;
+				color: rgb(11, 8, 196);
+			}
+		}
+	}
+}
+
+/**********************
+        MOBILE NAV
+***********************/
+.menu-btn {
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+	height: 20px;
+	width: 28px;
+	cursor: pointer;
+	z-index: 1;
+	transition: all 1s ease;
+	overflow: hidden;
+
+	&-burger {
+		position: absolute;
+		overflow: hidden;
+		right: 0;
+		top: 0.5rem;
+		width: 28px;
+		background: rgb(4, 3, 71);
+		height: 3px;
+		transition: all 1s ease;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 28px;
+		height: 4px;
+		background: rgb(4, 3, 71);
+		transition: all 1s ease;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 1rem;
+		width: 20px;
+		height: 3px;
+		background: rgb(4, 3, 71);
+		transition: all 1s ease;
+	}
+	&.open {
+		transform: rotate(720deg);
+		background: transparent;
+		z-index: 99999;
+		&::before {
+			transform: rotate(45deg) translate(5px, 8px);
+		}
+		&::after {
+			width: 28px;
+			transform: rotate(-45deg) translate(3px, -7px);
+		}
+	}
+	&-burger.open {
+		display: none;
+	}
+}
+.mobile-header {
+	position: absolute;
+	top: 0;
+	width: 80vw;
+	opacity: 0.8;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+
+	&.open {
+		visibility: visible;
+		opacity: 1;
+		z-index: 99;
+	}
+}
+.mobile-header .mobile-nav {
+	display: flex;
+	width: 70vw;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 10px;
+	background: rgba(1, 17, 48, 0.438);
+	padding-right: 1rem;
+	transform: translateY(-100%);
+	transition: all 1s ease;
+
+	&.open {
+		transform: translateY(0);
+	}
+}
+.mobile-header li {
+	list-style: none;
+	padding: 20px 30px 0 30px;
+	&.active {
+		border-bottom: 2px solid;
+	}
+	a {
+		color: rgb(4, 3, 71);
+
+		&:hover {
+			text-decoration: none;
+			color: rgb(27, 25, 170);
+		}
+	}
+}
+.icon {
+	height: 50px;
+	margin-top: 25px;
+	width: 100px;
+	background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png")
+		center no-repeat;
+}
+
+/**********************
+        HOME
+***********************/
+
+#home {
+	margin-top: 30vh;
+	.right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.logo-text {
+		display: flex;
+
+		.logo-img {
+			background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png")
+				center center / contain no-repeat;
+			width: 100px;
+		}
+		h3 {
+			font-weight: 700;
+			display: flex;
+			padding-left: 5px;
+			flex-direction: column;
+		}
+	}
+	a {
+		color: rgb(4, 3, 71);
+		margin-top: 10px;
+		background: none;
+		padding: 10px 20px;
+		border-radius: 20px;
+		border: 1px solid rgb(48, 47, 102);
+		&:hover {
+			background-color: rgb(48, 47, 102);
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	.data-circle {
+		height: 45vh;
+		width: 45vw;
+		background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/data-circle-removebg-preview_fptks5.png")
+			center center / contain no-repeat;
+	}
+}
+
+@media (max-width: 576px) {
+	#home .data-circle {
+		width: 80vw;
+		margin-left: 5vw;
+	}
+}
+
+/**********************
+        FORM INPUT
+***********************/
+.form-input {
+	margin-top: 20vh;
+	h4 {
+		font-weight: bolder;
+	}
+	div {
+		display: flex;
+		justify-content: center;
+	}
+	section {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		width: 350px;
+	}
+	label {
+		font-size: large;
+		font-weight: 600;
+	}
+	input,
+	select {
+		height: 50px;
+		width: 350px;
+		border-radius: 20px;
+		border: 1px solid rgb(48, 47, 102);
+		background: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.submit-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	button {
+		width: 80px;
+		height: 40px;
+		margin-top: 30px;
+		background: none;
+		border-radius: 20px;
+		border: 1px solid rgb(48, 47, 102);
+		&:hover {
+			background-color: rgb(48, 47, 102);
+			color: #fff;
+		}
+	}
+	.family,
+	.residence {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 576px) {
+	.form-input div {
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+/**********************
+        FOOTER
+***********************/
+#footer {
+	margin-top: 10vh;
+	background-color: rgb(181, 180, 255);
+	div {
+		display: flex;
+		justify-content: center;
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	.footer-icon {
+		height: 40px;
+		width: 80px;
+		background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png")
+			center center / contain no-repeat;
+	}
+	h4 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.right {
+		@extend h4;
+	}
+	.footer-links {
+		margin-top: 10px;
+		list-style: none;
+
+		a {
+			color: rgb(4, 3, 71);
+			padding: 0 10px;
+			&:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+	.copyright {
+		padding: 10px 0;
+	}
+}
+
+/**********************
+    OFFICIAL LOGIN
+**********************/
+.log {
+	display: flex;
+	align-items: center;
+}
+.login {
+	margin-top: 20vh;
+	margin-left: 15vw;
+	width: 70vw;
+	height: 50vh;
+	border: 2px solid;
+	border-radius: 80px;
+	display: flex;
+	flex-direction: column;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h3 {
+		position: absolute;
+		font-weight: 700;
+		font-size: large;
+		margin-left: 80px;
+		padding: 10px 20px;
+		width: max-content;
+		background-color: rgb(228, 228, 247);
+		margin-top: -20px;
+	}
+	.loginId {
+		margin-top: 10vh;
+	}
+	.loginId,
+	.password {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	label {
+		font-weight: 600;
+	}
+	input {
+		height: 50px;
+		width: 350px;
+		border-radius: 20px;
+		border: 1px solid rgb(48, 47, 102);
+		background: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.login-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		button {
+			width: 80px;
+			height: 40px;
+			margin-top: 10px;
+			background: none;
+			border-radius: 20px;
+			border: 1px solid rgb(48, 47, 102);
+			&:hover {
+				background-color: rgb(48, 47, 102);
+				color: #fff;
+			}
+		}
+	}
+}
+@media (min-width: 968px) {
+	.login {
+		width: 60vw;
+		margin-left: 10vw;
+	}
+}
+@media (max-width: 545px) {
+	.login input {
+		width: 250px;
+	}
+}
+
+.admin {
+	height: 60vh;
+}
