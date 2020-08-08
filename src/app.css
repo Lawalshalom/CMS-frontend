@@ -601,6 +601,10 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 545px) {
+  .login {
+    width: 90vw;
+    margin-left: 0;
+  }
   .login input {
     width: 250px;
   }
