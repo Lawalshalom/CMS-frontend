@@ -27,7 +27,7 @@ const Header = () => {
    const navType = (width) => {
    if(width > 545) {
         return (
-        <header id="header">
+        <header data-aos="fade-up" id="header">
         <div className="row">
             <div className="col-3">
                 <div className="icon"></div>

@@ -20,27 +20,26 @@ const Form = () => {
             submitBtn.style.display = "none"
             loading.style.display = "flex";
 
-            let formData = new FormData(form)
+            let formData = new FormData(form);
+            let name = formData.get("name");
+            let number = formData.get("familyNo");
+            let language = formData.get("language")
+            let state = formData.get("state")
 
             let Params = {
-                mode: 'no-cors',
                 headers: {
-                    "Content-type": "application/json"
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: JSON.stringify({
-                    name: formData.get("name"),
-                    number: formData.get("familyNo"),
-                    language: formData.get("language"),
-                    state: formData.get("state")
-                }),
-                method: "POST"
+                body: `name=${name}&number=${number}&language=${language}&state=${state}`,
+                method: "POST",
             };
             const sendData = async function(){
              const res = await fetch("https://cms-team20.herokuapp.com/api/data-upload", Params);
-
+             const data = await res.json();
                 loading.style.display = "none";
                 success.style.display = "flex";
-                console.log(res)}
+                console.log(data);
+        }
 
             sendData().catch(err => {
                 loading.style.display = "none";
@@ -50,7 +49,7 @@ const Form = () => {
                 console.log(err);
             });
         }
-    })
+    }, [])
     return (
     <div className="form-input">
     <h4 data-aos="fade-right">Please, kindly ensure the details provided are accurate and correct</h4>
@@ -70,7 +69,12 @@ const Form = () => {
         <div className="language col-12 col-sm-6 col-xm-6">
           <section data-aos="fade-right">
             <label>Native Language</label>
-            <input type="text" name="language" required minLength="3" placeholder="Enter Native Language"/>
+            <select name="language" id="language-select" required>
+                <option value="">--Please choose your native language--</option>
+                <option value="Yoruba">Yoruba</option>
+                <option value="Hausa">Hausa</option>
+                <option value="Igbo">Igbo</option>
+            </select>
             </section>
         </div>
         <div className="residence col-12 col-sm-6 col-xm-6">
@@ -79,7 +83,7 @@ const Form = () => {
             <select name="state" id="state-select" required>
                 <option value="">--Please choose your state--</option>
                 {originStates.map(state => { return (
-                    <option value="Abia" key={originStates.indexOf(state)}>
+                    <option value={state} key={originStates.indexOf(state)}>
                     {state}</option>)}
                 )}
             </select>

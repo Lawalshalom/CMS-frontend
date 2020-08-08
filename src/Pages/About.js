@@ -10,6 +10,7 @@ const About = () => {
                 list.classList.remove("active");
             }
         })
+        navList[2].style.display = "none";
         navList[3].classList.add("active");
     })
     return (

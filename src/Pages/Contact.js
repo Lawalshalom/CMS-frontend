@@ -10,6 +10,7 @@ const Contact = () => {
                 list.classList.remove("active");
             }
         })
+        navList[2].style.display = "none";
         navList[4].classList.add("active");
     })
     return (

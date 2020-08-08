@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Switch } from 'react-router-dom';
 import AOS from "aos";
 import Home from "./Pages/Home";
@@ -11,8 +11,9 @@ import "./app.css";
 
 
   const App = () => {
-    const toggleClass = () => {
-      return "dark theme"
+    const [censusData, setCensusData] = useState([])
+    const updateData = (data) => {
+      setCensusData(data.response);
     }
     useEffect(() => {
 
@@ -30,18 +31,14 @@ import "./app.css";
     return (
       <main>
           <Switch>
-              <Route path="/" render={renderprops =>
-                <Home toggleClass={toggleClass} {...renderprops} />} exact />
-              <Route path="/about" render={renderprops =>
-                <About toggleClass={toggleClass} {...renderprops} />} />
+              <Route path="/" render={renderprops =><Home {...renderprops} />} exact />
+              <Route path="/about" render={renderprops => <About {...renderprops} />} />
               <Route path="/official" render={renderprops =>
-                <Official toggleClass={toggleClass} {...renderprops} />} />
+                <Official updateData={updateData} censusData={censusData} {...renderprops} />} />
               <Route path="/administrative" render={renderprops =>
-                <Administrative toggleClass={toggleClass} {...renderprops} />} />
-              <Route path="/contact" render={renderprops =>
-                <Contact toggleClass={toggleClass} {...renderprops} />} />
-              <Route render={renderprops =>
-                <Error toggleClass={toggleClass} {...renderprops} />} />
+                <Administrative updateData={updateData} censusData={censusData} {...renderprops} />} />
+              <Route path="/contact" render={renderprops => <Contact {...renderprops} />} />
+              <Route render={renderprops => <Error {...renderprops} />} />
           </Switch>
       </main>
     )

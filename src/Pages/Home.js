@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from "../Components/Header";
 import Form from "../Components/Form";
 import Footer from "../Components/Footer";
 
 const Home = () => {
-
+    useEffect(() => {
+        const navList = document.querySelectorAll("li");
+        navList[2].style.display = "none";
+    });
     return (
     <>
         <div className="container-xl container-fluid">

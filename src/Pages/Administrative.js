@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
-const Administrative = () => {
+const Administrative = (props) => {
     useEffect(() => {
         const navList = document.querySelectorAll("li");
         navList.forEach(list => {
@@ -11,6 +11,7 @@ const Administrative = () => {
             }
         })
         navList[2].classList.add("active");
+        console.log(props.censusData)
     })
     return (
         <>
@@ -24,4 +25,4 @@ const Administrative = () => {
         </>
     )
 }
-export default Administrative
+export default Administrative;
