@@ -477,6 +477,76 @@ body {
 	}
 }
 
+/******************
+    ABOUT US
+*******************/
+#about {
+	margin-top: 15vh;
+
+	h2 {
+		padding-bottom: 20px;
+
+		span {
+			text-decoration: underline;
+		}
+	}
+
+	.about-img {
+		height: 50vh;
+		background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596934023/AboutUs-removebg-preview_zvolj3.png")
+			center center / cover no-repeat;
+	}
+	.about-text {
+		height: 50vh;
+		margin-top: 10vh;
+		overflow: hidden;
+	}
+}
+@media (max-width: 768px) {
+	#about .about-text {
+		height: 35vh;
+		margin-top: 0;
+	}
+}
+
+/******************
+    DASHBOARD
+*******************/
 .admin {
-	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	table {
+		border: 1px solid rgb(48, 47, 102);
+		th,
+		td {
+			padding: 5px;
+			text-align: center;
+			border-left: 1px solid;
+		}
+		th {
+			border-bottom: 1px solid;
+			border-top: 1px solid;
+		}
+	}
+}
+
+.totals {
+	width: 300px;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border: 1px solid;
+
+	h5 {
+		border-bottom: 2px solid;
+	}
+
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }

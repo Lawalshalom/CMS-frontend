@@ -677,7 +677,102 @@ body::-webkit-scrollbar {
   }
 }
 
+/******************
+    ABOUT US
+*******************/
+#about {
+  margin-top: 15vh;
+}
+
+#about h2 {
+  padding-bottom: 20px;
+}
+
+#about h2 span {
+  text-decoration: underline;
+}
+
+#about .about-img {
+  height: 50vh;
+  background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596934023/AboutUs-removebg-preview_zvolj3.png") center center/cover no-repeat;
+}
+
+#about .about-text {
+  height: 50vh;
+  margin-top: 10vh;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  #about .about-text {
+    height: 35vh;
+    margin-top: 0;
+  }
+}
+
+/******************
+    DASHBOARD
+*******************/
 .admin {
-  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin table {
+  border: 1px solid #302f66;
+}
+
+.admin table th,
+.admin table td {
+  padding: 5px;
+  text-align: center;
+  border-left: 1px solid;
+}
+
+.admin table th {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+.totals {
+  width: 300px;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 1px solid;
+}
+
+.totals h5 {
+  border-bottom: 2px solid;
+}
+
+.totals p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=app.css.map */
