@@ -11,7 +11,6 @@ const Administrative = (props) => {
     const igbo = [];
     let lowestState, heighestState;
     props.censusData.map(data => {
-        console.log(data);
       population.push(Number.parseInt(data.population));
       homes.push(data.homes);
       yoruba.push(data.yoruba);
@@ -23,9 +22,10 @@ const Administrative = (props) => {
         const heighest = population.reduce((a,b) => Math.max(a,b));
         props.censusData.map(data => {
             if (data.population === lowest.toString()){
-           return lowestState = data.state;
+            return lowestState = data.state;
             }
             else if (data.population === heighest.toString()){
+                console.log(heighest.toString());
                 return heighestState = data.state;
             } else return null;
         });

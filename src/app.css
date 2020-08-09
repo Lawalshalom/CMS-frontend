@@ -4,9 +4,19 @@
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: "Radio Stars";
+  src: url("./RadioStars.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Espresso";
+  src: url("./SFEspressoShackCondensed-Bo.ttf") format("truetype");
+}
+
 body {
-  color: #040347;
-  background-color: #e4e4f7;
+  color: #193566;
+  background-color: #ecf0f3;
 }
 
 body::-webkit-scrollbar {
@@ -22,19 +32,13 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
-#header .icon {
-  height: 50px;
-  width: 100px;
-  background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png") center no-repeat;
-}
-
 #header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-flex-item-align: center;
       align-self: center;
   margin-top: 25px;
@@ -51,12 +55,12 @@ body::-webkit-scrollbar {
 }
 
 #header .navbar a {
-  color: #040347;
+  color: #193566;
 }
 
 #header .navbar a:hover {
   text-decoration: none;
-  color: #0b08c4;
+  color: #0953d1;
 }
 
 /**********************
@@ -81,7 +85,7 @@ body::-webkit-scrollbar {
   right: 0;
   top: 0.5rem;
   width: 28px;
-  background: #040347;
+  background: #193566;
   height: 3px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -93,7 +97,7 @@ body::-webkit-scrollbar {
   top: 0;
   width: 28px;
   height: 4px;
-  background: #040347;
+  background: #193566;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -104,7 +108,7 @@ body::-webkit-scrollbar {
   top: 1rem;
   width: 20px;
   height: 3px;
-  background: #040347;
+  background: #193566;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -117,6 +121,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-btn.open::before {
+  height: 3px;
   -webkit-transform: rotate(45deg) translate(5px, 8px);
           transform: rotate(45deg) translate(5px, 8px);
 }
@@ -168,7 +173,7 @@ body::-webkit-scrollbar {
           justify-content: center;
   overflow: hidden;
   border-radius: 10px;
-  background: rgba(1, 17, 48, 0.438);
+  background: #d1d9e6;
   padding-right: 1rem;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -191,19 +196,27 @@ body::-webkit-scrollbar {
 }
 
 .mobile-header li a {
-  color: #040347;
+  color: #193566;
 }
 
 .mobile-header li a:hover {
   text-decoration: none;
-  color: #1b19aa;
+  color: #0953d1;
 }
 
 .icon {
-  height: 50px;
-  margin-top: 25px;
-  width: 100px;
-  background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png") center no-repeat;
+  font-family: Espresso;
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+.icon a {
+  color: #193566;
+}
+
+.icon a:hover {
+  text-decoration: none;
+  color: #0953d1;
 }
 
 /**********************
@@ -233,11 +246,15 @@ body::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #home .logo-text .logo-img {
-  background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png") center center/contain no-repeat;
   width: 100px;
+  padding-left: 30px;
+  font-family: Espresso;
 }
 
 #home .logo-text h3 {
@@ -245,7 +262,7 @@ body::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Merienda";
+  font-family: Radio Stars;
   padding-left: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -258,17 +275,17 @@ body::-webkit-scrollbar {
 }
 
 #home a {
-  color: #040347;
+  color: #193566;
   margin-top: 10px;
   background: none;
   padding: 10px 20px;
   border-radius: 20px;
-  border: 1px solid #302f66;
+  border: 1px solid #193566;
 }
 
 #home a:hover {
-  background-color: #302f66;
-  color: #fff;
+  background-color: #193566;
+  color: #ecf0f3;
   text-decoration: none;
 }
 
@@ -330,7 +347,7 @@ body::-webkit-scrollbar {
   height: 50px;
   width: 350px;
   border-radius: 20px;
-  border: 1px solid #302f66;
+  border: 1px solid #193566;
   background: none;
 }
 
@@ -358,12 +375,12 @@ body::-webkit-scrollbar {
   margin-top: 30px;
   background: none;
   border-radius: 20px;
-  border: 1px solid #302f66;
+  border: 1px solid #193566;
 }
 
 .form-input button:hover {
-  background-color: #302f66;
-  color: #fff;
+  background-color: #193566;
+  color: #ecf0f3;
 }
 
 .form-input .family,
@@ -401,7 +418,7 @@ body::-webkit-scrollbar {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 3px solid #302f66;
+  border: 3px solid #193566;
   border-bottom: none;
   border-left: none;
   overflow: hidden;
@@ -447,7 +464,7 @@ body::-webkit-scrollbar {
 ***********************/
 #footer {
   margin-top: 10vh;
-  background-color: #b5b4ff;
+  background-color: #d1d9e6;
 }
 
 #footer div {
@@ -472,13 +489,23 @@ body::-webkit-scrollbar {
 }
 
 #footer .footer-icon {
-  height: 40px;
-  width: 80px;
-  background: url("https://res.cloudinary.com/lawfirm1000/image/upload/v1596855165/logo-cms-removebg-preview_llqkab.png") center center/contain no-repeat;
+  width: 150px;
+  font-family: Espresso;
+  padding-left: 80px;
+  display: inline-block;
+}
+
+#footer .footer-icon a {
+  color: #193566;
+}
+
+#footer .footer-icon a:hover {
+  text-decoration: none;
+  color: #0953d1;
 }
 
 #footer h4 {
-  font-family: "Merienda";
+  font-family: Radio Stars;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,12 +547,12 @@ body::-webkit-scrollbar {
 }
 
 #footer .footer-links a {
-  color: #040347;
+  color: #193566;
   padding: 0 10px;
 }
 
 #footer .footer-links a:hover {
-  color: #fff;
+  color: #0953d1;
   text-decoration: none;
 }
 
@@ -586,7 +613,7 @@ body::-webkit-scrollbar {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background-color: #e4e4f7;
+  background-color: #ecf0f3;
   margin-top: -20px;
 }
 
@@ -615,7 +642,7 @@ body::-webkit-scrollbar {
   height: 50px;
   width: 350px;
   border-radius: 20px;
-  border: 1px solid #302f66;
+  border: 1px solid #193566;
   background: none;
 }
 
@@ -642,12 +669,12 @@ body::-webkit-scrollbar {
   margin-top: 10px;
   background: none;
   border-radius: 20px;
-  border: 1px solid #302f66;
+  border: 1px solid #193566;
 }
 
 .login .login-btn button:hover {
-  background-color: #302f66;
-  color: #fff;
+  background-color: #193566;
+  color: #ecf0f3;
 }
 
 .login .failed {
@@ -727,7 +754,7 @@ body::-webkit-scrollbar {
 }
 
 .admin table {
-  border: 1px solid #302f66;
+  border: 1px solid #193566;
 }
 
 .admin table th,

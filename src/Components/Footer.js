@@ -6,7 +6,7 @@ const Footer = ()=> {
             <footer id="footer">
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-12 logo">
-                        <div className="footer-icon"></div>
+                        <div className="footer-icon"><h1><Link to="/">CMS</Link></h1></div>
                         <h4><span>CENSUS</span><span>MANAGEMENT</span><span>SYSTEM</span></h4>
                     </div>
                     <div className="col-lg-8 col-md-12 col-sm-12 right">

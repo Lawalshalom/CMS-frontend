@@ -38,6 +38,7 @@ const Form = () => {
              const data = await res.json();
                 loading.style.display = "none";
                 success.style.display = "flex";
+                form.reset();
                 console.log(data);
         }
 
@@ -62,7 +63,7 @@ const Form = () => {
         </div>
         <div className="family col-12 col-sm-6 col-xm-6">
             <section data-aos="fade-left">
-            <label>Number in Family</label>
+            <label>Number of Family Members</label>
             <input type="number" name="familyNo" required min="1" placeholder="1"/>
             </section>
         </div>

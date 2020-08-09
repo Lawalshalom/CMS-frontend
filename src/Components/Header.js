@@ -30,7 +30,7 @@ const Header = () => {
         <header data-aos="fade-up" id="header">
         <div className="row">
             <div className="col-3">
-                <div className="icon"></div>
+                <div className="icon"><h1><Link to="/">CMS</Link></h1> </div>
             </div>
             <div className="col-9 navbar">
                 <li className="active"><Link to="/">Home</Link></li>
@@ -47,7 +47,7 @@ const Header = () => {
      <div className="menu-btn" ref={inputRef} onClick={toggleMenu}>
         <span className="menu-btn-burger" ref={input2Ref}></span>
     </div>
-    <div className="icon"></div>
+    <div className="icon"><h2>CMS</h2></div>
     <header className="mobile-header" ref={nav}>
         <div className="row">
             <div className="col-3">
