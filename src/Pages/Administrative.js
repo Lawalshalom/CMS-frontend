@@ -20,11 +20,11 @@ const Administrative = (props) => {
     if (population.length > 0){
         const lowest = population.reduce((a,b) => Math.min(a,b));
         const heighest = population.reduce((a,b) => Math.max(a,b));
-        props.censusData.map(data => {
+        props.censusData.forEach(data => {
             if (data.population === lowest.toString()){
             return lowestState = data.state;
             }
-            else if (data.population === heighest.toString()){
+            else if (heighest.toString() === data.population){
                 console.log(heighest.toString());
                 return heighestState = data.state;
             } else return null;
