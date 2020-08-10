@@ -906,10 +906,13 @@ body::-webkit-scrollbar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 10px 90px 0 90px;
+    margin: 10px 40px 0 40px;
   }
   .contact .name-email input[type="email"] {
     padding-top: 30px;
+  }
+  .contact .subject-message {
+    margin: 10px 70px 30px 70px;
   }
 }
 /*# sourceMappingURL=app.css.map */

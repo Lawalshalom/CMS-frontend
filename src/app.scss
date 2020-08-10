@@ -649,10 +649,13 @@ body {
 @media (max-width: 675px) {
 	.contact .name-email {
 		flex-direction: column;
-		margin: 10px 90px 0 90px;
+		margin: 10px 40px 0 40px;
 
 		input[type="email"] {
 			padding-top: 30px;
 		}
+	}
+	.contact .subject-message {
+		margin: 10px 70px 30px 70px;
 	}
 }
