@@ -36,9 +36,9 @@ body::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-item-align: center;
       align-self: center;
   margin-top: 25px;
@@ -563,15 +563,6 @@ body::-webkit-scrollbar {
 /**********************
     OFFICIAL LOGIN
 **********************/
-.log {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .login {
   margin-top: 20vh;
   margin-left: 15vw;
@@ -677,6 +668,10 @@ body::-webkit-scrollbar {
   color: #ecf0f3;
 }
 
+.login .login-btn button:focus {
+  outline: none;
+}
+
 .login .failed {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -744,34 +739,37 @@ body::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.admin table {
+.admin .dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+}
+
+.admin .dashboard table {
+  width: 100%;
   border: 1px solid #193566;
 }
 
-.admin table th,
-.admin table td {
+.admin .dashboard table th,
+.admin .dashboard table td {
   padding: 5px;
   text-align: center;
   border-left: 1px solid;
 }
 
-.admin table th {
+.admin .dashboard table th {
   border-bottom: 1px solid;
   border-top: 1px solid;
 }
 
 .totals {
-  width: 300px;
-  margin-top: 50px;
+  width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -801,5 +799,27 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 650px) {
+  .admin {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .admin .dashboard {
+    width: auto;
+  }
+  .admin .dashboard table th,
+  .admin .dashboard table td {
+    padding: 3px;
+  }
+  .totals {
+    width: auto;
+  }
 }
 /*# sourceMappingURL=app.css.map */
