@@ -70,8 +70,8 @@ const Contact = () => {
                         <input data-aos="fade-left" type="email" name="email" required minLength="10" placeholder="Email"/>
                    </div>
                    <div className="subject-message">
-                       <input data-aos="fade-left" type="name" name="message" required minLength="10" placeholder="Subject"/>
-                       <textarea data-aos="fade-right" placeholder="Your message" required minLength="20" ></textarea>
+                       <input data-aos="fade-left" type="name" name="subject" required minLength="10" placeholder="Subject"/>
+                       <textarea data-aos="fade-right" name="message" placeholder="Your message" required minLength="20" ></textarea>
                    </div>
                    <div data-aos="fade-right" className="submit-btn">
                        <button type="submit">Send Message</button>
