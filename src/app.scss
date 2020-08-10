@@ -592,3 +592,67 @@ body {
 		width: auto;
 	}
 }
+
+/*****************
+	CONTACT US
+******************/
+.contact {
+	margin-top: 10vh;
+
+	input,
+	textarea {
+		background: none;
+		border: none;
+		border-bottom: 1px solid $foreground;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.name-email {
+		display: flex;
+		justify-content: center;
+		padding: 30px;
+		input[type="name"] {
+			margin-right: 50px;
+		}
+	}
+	.subject-message {
+		display: flex;
+		flex-direction: column;
+		margin: 10px 120px 30px 120px;
+
+		input {
+			margin-bottom: 40px;
+		}
+	}
+	.submit-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	button {
+		padding: 10px 5px;
+		background: none;
+		border-radius: 20px;
+		border: 1px solid $foreground;
+		&:hover {
+			background-color: $foreground;
+			color: $background;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+@media (max-width: 675px) {
+	.contact .name-email {
+		flex-direction: column;
+		margin: 10px 90px 0 90px;
+
+		input[type="email"] {
+			padding-top: 30px;
+		}
+	}
+}

@@ -822,4 +822,94 @@ body::-webkit-scrollbar {
     width: auto;
   }
 }
+
+/*****************
+	CONTACT US
+******************/
+.contact {
+  margin-top: 10vh;
+}
+
+.contact input,
+.contact textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #193566;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+}
+
+.contact .name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+}
+
+.contact .name-email input[type="name"] {
+  margin-right: 50px;
+}
+
+.contact .subject-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 120px 30px 120px;
+}
+
+.contact .subject-message input {
+  margin-bottom: 40px;
+}
+
+.contact .submit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.contact button {
+  padding: 10px 5px;
+  background: none;
+  border-radius: 20px;
+  border: 1px solid #193566;
+}
+
+.contact button:hover {
+  background-color: #193566;
+  color: #ecf0f3;
+}
+
+.contact button:focus {
+  outline: none;
+}
+
+@media (max-width: 675px) {
+  .contact .name-email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px 90px 0 90px;
+  }
+  .contact .name-email input[type="email"] {
+    padding-top: 30px;
+  }
+}
 /*# sourceMappingURL=app.css.map */

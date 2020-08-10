@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import * as d3 from "d3";
+import Chart from "chart.js";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
@@ -46,53 +46,18 @@ const Administrative = (props) => {
 
     useEffect(() => {
 
-    const height = 500;
-    const width = 500;
-    const barWidth = 35;
-    const barOffset = 5;
-
-    const tooltip = d3.select("body").append("div")
-                    .style("position", "absolute")
-                    .style("background", "absolute")
-                    .style("padding", "5px 15px")
-                    .style("border", "1px #333 solid")
-                    .style("border-radius", "5px")
-                    .style("opacity", 0);
-
-     d3.select("#dataChart").append("svg")
-                        .attr("width", width)
-                        .attr("height", height)
-                        .style("background", "f4f4f4")
-                        .selectAll("rect")
-                        .data(population)
-                        .enter().append("rect")
-                        .style("fill", "lightgreen")
-                        .style("opacity", 1)
-                        .attr("width", barWidth)
-                        .attr("height", function(d){
-                            return d;
-                        })
-                        .attr("x", function(d,i){
-                            return i * (barWidth + barOffset);
-                        })
-                        .attr("y", function(d){
-                            return height - d;
-                        })
-                        .on("mouseover", function(d){
-                            tooltip.transition()
-                            .style("opacity", 1)
-                        tooltip.html(d)
-                            .style("left", (d3.event.pageX+"px"))
-                            .style("top", (d3.event.pageY+"px"))
-                        d3.select(this).style("opacity", 0.5)
-                        })
-                        .on("mouseout", function(d){
-                            tooltip.transition()
-                            .style("opacity", 0)
-                            d3.select(this).style("opacity", 1)
-                        })
-
-
+        var ctx = document.getElementById("barChart").getContext('2d');
+            new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: sortedData.map(data => data.state),
+              datasets: [{
+                label: 'Population',
+                data: sortedData.map(data => data.population),
+                backgroundColor: "rgba(255,0,0,1)"
+              }]
+        }
+});
         const navList = document.querySelectorAll("li");
         navList.forEach(list => {
             if (list.classList.contains("active")) {
@@ -157,7 +122,7 @@ const Administrative = (props) => {
                 <p>Total Yoruba: <strong>{yoruba.reduce((a,b) => a+b, 0)}</strong></p>
               </div>
             </div>
-            <div id="dataChart"></div>
+            <canvas id="barChart"></canvas>
         <Footer />
         </div>
         </>
