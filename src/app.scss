@@ -21,6 +21,15 @@ body {
 		display: none;
 	}
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	overflow: hidden;
+}
 
 #header {
 	margin-top: 0;
@@ -163,6 +172,7 @@ body {
 }
 .icon {
 	font-family: Espresso;
+	overflow-y: hidden;
 	padding-top: 40px;
 	padding-left: 50px;
 	a {

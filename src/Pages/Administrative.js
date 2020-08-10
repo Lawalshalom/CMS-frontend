@@ -117,9 +117,9 @@ const Administrative = (props) => {
                 <p>Population: <span>{population.reduce((a,b) => a+b, 0)}</span></p>
                 <p>Most Populated State: <strong>{heighestState}</strong></p>
                 <p>Least Populated State: <strong>{lowestState}</strong></p>
-                <p>Total Hausa: <strong>{hausa.reduce((a,b) => a+b, 0)}</strong></p>
-                <p>Total Igbo: <strong>{igbo.reduce((a,b) => a+b, 0)}</strong></p>
-                <p>Total Yoruba: <strong>{yoruba.reduce((a,b) => a+b, 0)}</strong></p>
+                <p>Total Hausa families: <strong>{hausa.reduce((a,b) => a+b, 0)}</strong></p>
+                <p>Total Igbo families: <strong>{igbo.reduce((a,b) => a+b, 0)}</strong></p>
+                <p>Total Yoruba families: <strong>{yoruba.reduce((a,b) => a+b, 0)}</strong></p>
               </div>
             </div>
             <canvas id="barChart"></canvas>
